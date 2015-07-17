@@ -1,6 +1,7 @@
 module Check.Runner.Browser
   ( display
   , displayVerbose
+  , display'
   ) where
 {-| Browser test runner for elm-check. This module provides functions to
 run and visualize tests in the browser.
