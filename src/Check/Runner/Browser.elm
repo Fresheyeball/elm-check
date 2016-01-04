@@ -15,16 +15,22 @@ import Html exposing (Html, Attribute, div, text, ul, ol, li)
 import Html.Attributes exposing (style)
 import List
 
-
+(:::) : a -> b -> (a, b)
 (:::) = (,)
 
 type alias Style = List (String, String)
 
+pomegranate : String
+pomegranate = "#c0392b"
 
-pomegranate     = "#c0392b"
+backgroundBrown : String
 backgroundBrown = "#DDCCA1"
-midnightBlue    = "#2c3e50"
-nephritis       = "#27ae60"
+
+midnightBlue : String
+midnightBlue = "#2c3e50"
+
+nephritis : String
+nephritis = "#27ae60"
 
 toColor : Bool -> String
 toColor b =
@@ -139,7 +145,7 @@ displayUnit b unitEvidence = case unitEvidence of
           else
             [ li
                 []
-                [ text ("Seed: " ++ (toString options.seed.state)) ]
+                [ text ("Seed: " ++ (toString options.seed)) ]
             , li
                 []
                 [ text ("Number of shrinking operations performed: " ++ (toString options.numberOfShrinks)) ]
